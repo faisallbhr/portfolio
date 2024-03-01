@@ -1,30 +1,23 @@
 import { GrMail } from "react-icons/gr";
 import { IArticle, IExperience, INavItem, IProject, ISocialMedia } from "./interface";
 import { SiLinkedin, SiGithub, SiInstagram, SiMedium } from "react-icons/si";
-import { CgProfile } from "react-icons/cg";
-import { FaRegBuilding } from "react-icons/fa";
-import { RiArticleLine, RiComputerLine } from "react-icons/ri";
 
 export const NAV_ITEMS: INavItem[] = [
   {
     section: "about",
-    name: "ABOUT",
-    icon: CgProfile
+    name: "ABOUT"
   },
   {
     section: "experience",
-    name: "EXPERIENCE",
-    icon: FaRegBuilding
+    name: "EXPERIENCE"
   },
   {
     section: "projects",
-    name: "PROJECTS",
-    icon: RiComputerLine
+    name: "PROJECTS"
   },
   {
     section: "articles",
-    name: "ARTICLES",
-    icon: RiComputerLine
+    name: "ARTICLES"
   }
 ];
 

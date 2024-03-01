@@ -3,7 +3,6 @@ import { IconType } from "react-icons";
 export interface INavItem {
   section: string;
   name: string;
-  icon: IconType;
 }
 
 export interface ISocialMedia {

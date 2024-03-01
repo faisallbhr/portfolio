@@ -3,7 +3,6 @@
 import { useActiveSection } from "@/app/utils/useActiveSection";
 import { EXPERIENCES } from "@/app/utils/constant";
 import Link from "next/link";
-import React from "react";
 import { LuArrowUpRight } from "react-icons/lu";
 
 export default function Experience() {
@@ -19,37 +18,39 @@ export default function Experience() {
       <div className="px-4">
         <span className="h-px w-full px-4 bg-white md:block hidden relative -top-4 "></span>
       </div>
-      {EXPERIENCES.map((item, index) => (
-        <Link key={index} href={item.link} target="_blank">
-          <div className="group hover:md:bg-gray-50 hover:md:bg-opacity-10 p-4 duration-300 rounded cursor-pointer">
-            <h3 className=" group-hover:text-cyan-400">
-              {item.position} ({item.type}) &bull; {item.company}{" "}
-              <span className="duration-150 inline-block translate-y-1 group-hover:translate-y-0 group-hover:translate-x-1 ">
-                <LuArrowUpRight />
-              </span>
-            </h3>
-            <span className="italic text-sm">{item.date}</span>
-            <ul className="my-2">
-              {item.jobDesc.map((job, jobIndex) => (
-                <li key={jobIndex} className="flex items-start">
-                  <span className="h-1.5 max-w-1.5 w-full bg-white rounded-full mr-2 mt-2.5"></span>
-                  <p className="text-gray-400">{job}</p>
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-wrap gap-2">
-              {item.techStack.map((tech, techIndex) => (
-                <small
-                  key={techIndex}
-                  className="px-3 py-1 rounded-full bg-cyan-200/20 text-cyan-400 font-medium shadow"
-                >
-                  {tech}
-                </small>
-              ))}
+      <div className="space-y-2">
+        {EXPERIENCES.map((item, index) => (
+          <Link key={index} href={item.link} target="_blank" className="block">
+            <div className="group hover:md:bg-gray-50 hover:md:bg-opacity-10 p-4 duration-300 rounded cursor-pointer">
+              <h3 className=" group-hover:text-cyan-400">
+                {item.position} ({item.type}) &bull; {item.company}{" "}
+                <span className="duration-150 inline-block translate-y-1 group-hover:translate-y-0 group-hover:translate-x-1 ">
+                  <LuArrowUpRight />
+                </span>
+              </h3>
+              <span className="italic text-sm">{item.date}</span>
+              <ul className="my-2">
+                {item.jobDesc.map((job, jobIndex) => (
+                  <li key={jobIndex} className="flex items-start">
+                    <span className="h-1.5 max-w-1.5 w-full bg-white rounded-full mr-2 mt-2.5"></span>
+                    <p className="text-gray-400">{job}</p>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2">
+                {item.techStack.map((tech, techIndex) => (
+                  <small
+                    key={techIndex}
+                    className="px-3 py-1 rounded-full bg-cyan-200/20 text-cyan-400 font-medium shadow"
+                  >
+                    {tech}
+                  </small>
+                ))}
+              </div>
             </div>
-          </div>
-        </Link>
-      ))}
+          </Link>
+        ))}
+      </div>
     </section>
   );
 }
