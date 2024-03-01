@@ -11,7 +11,7 @@ export default function Project() {
   return (
     <section id="projects">
       <h2
-        className={`w-full px-4 py-2 mb-4 font-semibold duration-300 ${isSticky.projects ? "sticky top-0 backdrop-blur-md shadow-sm shadow-white" : ""}`}
+        className={`w-full px-4 py-2 mb-4 font-semibold duration-300 z-10 ${isSticky.projects ? "sticky top-0 backdrop-blur-md shadow-sm shadow-white" : ""}`}
       >
         PROJECTS
       </h2>

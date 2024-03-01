@@ -12,7 +12,7 @@ export default function Experience() {
   return (
     <section id="experience">
       <h2
-        className={`w-full px-4 py-2 mb-4 font-semibold duration-300 ${isSticky.experience ? "sticky top-0 backdrop-blur-md shadow-sm shadow-white" : ""}`}
+        className={`w-full px-4 py-2 mb-4 font-semibold duration-300 z-10 ${isSticky.experience ? "sticky top-0 backdrop-blur-md shadow-sm shadow-white" : ""}`}
       >
         EXPERIENCE
       </h2>
@@ -24,7 +24,7 @@ export default function Experience() {
           <div className="group hover:md:bg-gray-50 hover:md:bg-opacity-10 p-4 duration-300 rounded cursor-pointer">
             <h3 className=" group-hover:text-cyan-400">
               {item.position} ({item.type}) &bull; {item.company}{" "}
-              <span className="duration-150 inline-block translate-y-1 group-hover:translate-y-0 group-hover:translate-x-1">
+              <span className="duration-150 inline-block translate-y-1 group-hover:translate-y-0 group-hover:translate-x-1 ">
                 <LuArrowUpRight />
               </span>
             </h3>
